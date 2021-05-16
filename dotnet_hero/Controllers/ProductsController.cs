@@ -8,11 +8,13 @@ using Mapster;
 using dotnet_hero.DTOs.Product;
 using dotnet_hero.Interfaces;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dotnet_hero.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService productservice;
